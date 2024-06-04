@@ -1,12 +1,13 @@
+import { useState } from "react";
 import DoctorLogin from "./components/DoctorLogin";
 import PricingPage from "./components/PricingPage";
 
 export default function App() {
-  return (
-    <>
-      {/* <PricingPage /> */}
+  const [renderScreen, setRenderScreen] = useState("login");
 
-      <DoctorLogin />
-    </>
+  return renderScreen === "login" ? (
+    <DoctorLogin handleLoginClick={() => setRenderScreen("pricing")} />
+  ) : (
+    <PricingPage />
   );
 }

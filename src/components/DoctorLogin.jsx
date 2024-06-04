@@ -1,7 +1,7 @@
 // ============= Dark Version =================
 import React from "react";
 
-const DoctorLogin = () => {
+const DoctorLogin = ({ handleLoginClick }) => {
   return (
     <div className="flex h-screen">
       <div className="hidden flex-1 bg-[url('https://i.pinimg.com/originals/0f/26/81/0f268185754236facab219156bb71694.jpg')] bg-cover bg-center bg-no-repeat md:flex dark:bg-[url('https://i.pinimg.com/736x/bd/5a/5e/bd5a5e7a73794901f41ab5faba4fdea4.jpg')]">
@@ -44,7 +44,10 @@ const DoctorLogin = () => {
             Forgot password?
           </div>
 
-          <button className="mt-5 w-full rounded-full border border-blue-400 bg-blue-500 px-4 py-1.5 font-semibold text-white hover:bg-blue-400">
+          <button
+            onClick={handleLoginClick}
+            className="mt-5 w-full rounded-full border border-blue-400 bg-blue-500 px-4 py-1.5 font-semibold text-white hover:bg-blue-400"
+          >
             Sign in
           </button>
 
